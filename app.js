@@ -4,10 +4,12 @@ const app = Vue.createApp({
     data() {
         return {
             showAuthor: true,
-            author: "Abdul Kader Zilani",
-            designation: 'Sr. Software Engineer',
-            experience: "4+",
-            age: 30,
+            authors: [
+                {name: "Abdul Kader Zilani", designation: "Sr. Software Engineer", experience: "4+ years"},
+                {name: "Abdul", designation: "Software Engineer", experience: "5+ years"},
+                {name: "Kader", designation: "Sr. Engineer", experience: "6+ years"},
+                {name: "Zilani", designation: "Engineer", experience: "7+ years"},
+            ],
             x: 0,
             y: 0
         }

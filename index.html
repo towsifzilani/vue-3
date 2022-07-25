@@ -21,12 +21,12 @@
 
     <div id="app">
         <div v-if="showAuthor">
-            <ul>
-                <li>{{ author }}</li>
-                <li>{{ designation }}</li>
-                <li>{{ experience }}</li>
-                <li>{{ age }}</li>
-            </ul>
+
+            <div v-for="author in authors">
+                <h2 style="color: #6777ef">{{ author.name }}</h2>
+                <p>{{ author.designation }}</p>
+                <span>{{ experience }}</span>
+            </div>
     
             <div><button v-on:click="age++">Increase Age</button><button v-on:click="age--">Decrease Age</button><button @click="changeDesignation">Change designation</button></div>
         </div>

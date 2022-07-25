@@ -7,7 +7,9 @@ const app = Vue.createApp({
             author: "Abdul Kader Zilani",
             designation: 'Sr. Software Engineer',
             experience: "4+",
-            age: 30
+            age: 30,
+            x: 0,
+            y: 0
         }
     },
     methods: {
@@ -21,6 +23,8 @@ const app = Vue.createApp({
             console.log(e, e.type)
         },
         handleMousemove(e) {
+            this.x = e.offsetX;
+            this.y = e.offsetY;
             console.log(e, e.type)
         }
     }
